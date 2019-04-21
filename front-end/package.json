@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-preset-react-app": "^7.0.2",
     "firebase": "^5.10.0",
     "history": "^4.9.0",
     "react": "^16.8.6",

@@ -34,11 +34,13 @@
     "mongoose": "^5.4.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
+    "qtumjs-wallet": "^0.2.1",
     "stats-js": "^1.0.0",
     "three": "^0.100.0",
     "validator": "^10.10.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "webpack-cli": "^3.3.0"
   }
 }
