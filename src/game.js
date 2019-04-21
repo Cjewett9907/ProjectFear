@@ -43,7 +43,6 @@ class Game {
     this.flickerDirection = 1
 
 		this.wallet = new cryptoWallet;
-		this.newWallet = this.wallet.createNewWallet();
 
     // Use this variable for minting new Blockchain tokens
     this.fearTokens = 0
@@ -81,8 +80,9 @@ class Game {
     cancelAnimationFrame(this.update);
 
     // this.fearTokens  each do mint new coin
-		this.fearTokens = 1;
-		this.wallet.send(this.newWallet.address, this.fearTokens);
+		this.fearTokens += 1;
+		console.log("fear tokens collected: " + this.fearTokens);
+		this.wallet.send().catch((err) => console.log(err));
 
     document.getElementById('splash').style.visibility = 'visible';
     document.getElementById('instructions_text').innerHTML = 'HEAR THE STORY AGAIN?';
@@ -101,10 +101,9 @@ class Game {
     cancelAnimationFrame(this.update);
 
     // this.fearTokens  each do mint new coin
-		this.fearTokens = 10;
-		this.wallet.send(this.newWallet.address, this.fearTokens);
-
-
+		this.fearTokens += 10;
+		console.log("fear tokens collected: " + this.fearTokens);
+		this.wallet.send().catch((err) => console.log(err));
 
     document.getElementById('splash').style.visibility = 'visible';
     document.getElementById('title_text').innerHTML = 'YOU ESCAPED PROJECT FEAR!!!';
